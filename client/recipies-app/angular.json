@@ -118,6 +118,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "recipies-app"
+    }
+  },
+  "defaultProject": "recipies-app",
+  "cli": {
+    "analytics": false
+  }
 }
