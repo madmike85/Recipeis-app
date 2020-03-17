@@ -4,7 +4,8 @@
   "description": "API for recipies app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/madmike85/Recipeis-app/issues"
   },
-  "homepage": "https://github.com/madmike85/Recipeis-app#readme"
+  "homepage": "https://github.com/madmike85/Recipeis-app#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
 }
