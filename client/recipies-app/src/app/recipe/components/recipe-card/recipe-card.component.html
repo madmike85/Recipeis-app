@@ -1,0 +1,19 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ recipe.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="card__description">
+      {{ recipe.description }}
+    </p>
+    <p class="card__prep-time">Prepareton time: {{ recipe.preparationTime }} min.</p>
+    <ul class="card__ingredients-list">
+      <li class="list__item" *ngFor="let item of recipe.ingredients | keyvalue">
+        {{ item.key }}: {{ item.vale }} g.
+      </li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="goToDetails(recipe._id)">Details</button>
+  </mat-card-actions>
+</mat-card>

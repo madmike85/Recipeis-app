@@ -1,0 +1,45 @@
+mat-toolbar {
+  position: relative;
+}
+
+mat-toolbar-row {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+
+  &__img {
+    height: 100%;
+    filter: invert(1);
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.search {
+  &__icon {
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
+  &__container {
+    position: absolute;
+    max-width: none;
+    bottom: 0;
+    background: #c2185b;
+    transition: ease all 0.5s;
+    z-index: -2;
+  }
+}
+
+.bar-shown {
+  bottom: -64px;
+  z-index: 0;
+}

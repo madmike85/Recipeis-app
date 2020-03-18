@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+form {
+  flex-basis: 90%;
+}
+
+.search {
+  &__field {
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    height: 34px;
+    font-size: 20px;
+    width: 100%;
+
+    &::placeholder {
+      color: #fff;
+      opacity: 0.6;
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
+  &__close {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+}

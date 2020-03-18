@@ -1,0 +1,22 @@
+.card {
+  width: 40%;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 26px;
+
+  &__description {
+    margin-bottom: 13px;
+  }
+}
+
+mat-card-header {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}

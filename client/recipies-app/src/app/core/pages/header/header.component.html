@@ -1,5 +1,19 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<mat-toolbar color="primary">
+  <mat-toolbar-row color="primary" class="search__container" [ngClass]="{ 'bar-shown': isOpen }">
+    <app-search-bar></app-search-bar>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a class="logo" href="#"
+      ><img class="logo__img" src="../../../../assets/chef.svg" alt="logo"
+    /></a>
+    <span class="spacer"></span>
+    <mat-icon
+      class="search__icon"
+      aria-hidden="false"
+      aria-label="search icon"
+      (click)="toggleSearchBar()"
+      >search</mat-icon
+    >
+    <button mat-raised-button>SIGN UP / LOGIN</button>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,17 @@
+<mat-icon class="search__icon" aria-hidden="false" aria-label="search icon">search</mat-icon>
+<form [formGroup]="searchForm">
+  <input
+    #searchBox
+    formControlName="searchQuery"
+    type="text"
+    class="search__field"
+    placeholder="Search..."
+  />
+</form>
+<mat-icon
+  class="search__close"
+  aria-hidden="false"
+  aria-label="search icon"
+  (click)="toggleSearchBar()"
+  >clear</mat-icon
+>

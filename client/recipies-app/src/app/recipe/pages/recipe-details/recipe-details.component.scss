@@ -1,0 +1,26 @@
+.recipe {
+  padding: 100px 5% 5% 5%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__preparation-time {
+    text-align: center;
+  }
+}

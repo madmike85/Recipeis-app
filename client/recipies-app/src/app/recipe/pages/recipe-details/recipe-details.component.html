@@ -1,0 +1,15 @@
+<div class="recipe" *ngIf="recipe">
+  <h2 class="recipe__title">{{ recipe.title }}</h2>
+  <p class="recipe__description">{{ recipe.description }}</p>
+  <p class="recipe__preparation-time">Preparation time: {{ recipe.preparationTime }} min</p>
+  <p class="recipe__subtitle">Ingredients</p>
+  <ul class="recipe__ingredients">
+    <li class="recipe__list-item" *ngFor="let ingredient of recipe.ingredients | keyvalue">
+      {{ ingredient.key }}: {{ ingredient.value }} g
+    </li>
+  </ul>
+  <p class="recipe__subtitle">Preparation steps</p>
+  <ol class="recipe__steps">
+    <li class="recipe__list-item" *ngFor="let step of recipe.steps">{{ step }}</li>
+  </ol>
+</div>
