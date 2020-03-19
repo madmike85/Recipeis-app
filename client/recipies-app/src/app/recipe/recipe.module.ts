@@ -6,10 +6,12 @@ import { RecipeCardComponent } from './components/recipe-card/recipe-card.compon
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 import { RecipeDetailsComponent } from './pages/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [SearchResultsComponent, RecipeCardComponent, RecipeDetailsComponent],
-  imports: [CommonModule, RecipeRoutingModule, MatCardModule, MatButtonModule],
+  imports: [CommonModule, RecipeRoutingModule, MatCardModule, MatButtonModule, MatIconModule],
 })
 export class RecipeModule {}

@@ -1,5 +1,6 @@
 <div class="recipe" *ngIf="recipe">
   <h2 class="recipe__title">{{ recipe.title }}</h2>
+  <p class="recipe__rating">Rating: {{ recipe.rating }}</p>
   <p class="recipe__description">{{ recipe.description }}</p>
   <p class="recipe__preparation-time">Preparation time: {{ recipe.preparationTime }} min</p>
   <p class="recipe__subtitle">Ingredients</p>
@@ -12,4 +13,21 @@
   <ol class="recipe__steps">
     <li class="recipe__list-item" *ngFor="let step of recipe.steps">{{ step }}</li>
   </ol>
+  <div class="recipe__button-row">
+    <button mat-raised-button color="primary" class="btn__back" (click)="goBack()">Back</button>
+    <div class="rating__buttons">
+      <button
+        mat-raised-button
+        color="primary"
+        class="btn__like"
+        (click)="like()"
+        [disabled]="rated"
+      >
+        <mat-icon aria-hidden="false" aria-label="like">thumb_up_alt</mat-icon>
+      </button>
+      <button mat-raised-button color="warn" (click)="dislike()" [disabled]="rated">
+        <mat-icon aria-hidden="false" aria-label="dislike">thumb_down_alt</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>

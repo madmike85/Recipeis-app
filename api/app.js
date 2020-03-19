@@ -24,9 +24,23 @@ app.get('/recipes', (req, res) => {
     });
 });
 
+// Get all recipes which title match query
+
+app.get('/recipes/:query', (req, res) => {
+  Recipe.find({
+    title: { $regex: `.*${req.params.query}.*` },
+  })
+    .then((recipes) => {
+      res.send(recipes);
+    })
+    .catch((error) => {
+      res.send(error);
+    });
+});
+
 // Get the recipe from database
 
-app.get('/recipes/:id', (req, res) => {
+app.get('/recipes/recipe/:id', (req, res) => {
   Recipe.findOne({ _id: req.params.id })
     .then((recipe) => res.send(recipe))
     .catch(() => {
@@ -53,15 +67,17 @@ app.post('/recipes', (req, res) => {
 
 // Update recipe in database
 
-app.patch('/recipes/:id', (req, res) => {
+app.patch('/recipes/recipe/:id', (req, res) => {
+  console.log(req.body, 'test');
   Recipe.findOneAndUpdate({ _id: req.params.id }, { $set: req.body }).then((recipe) => {
+    console.log(recipe);
     res.send(recipe);
   });
 });
 
 // Delete recipe from database
 
-app.delete('/recipes/:id', (req, res) => {
+app.delete('/recipes/recipe/:id', (req, res) => {
   Recipe.findOneAndRemove({
     _id: req.params.id,
   }).then((deletedRecipe) => res.send(deletedRecipe));

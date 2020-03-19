@@ -20,7 +20,14 @@ const RecipeSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
-  description: String,
+  description: {
+    type: String,
+    required: true,
+  },
+  rating: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const Recipe = mongoose.model('Recipe', RecipeSchema);
